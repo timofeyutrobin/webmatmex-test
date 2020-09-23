@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Страница Тимофея Утробина">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel ="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Тимофей Утробин</title>
+</head>
+<body class="page">
+    <header class="header page__header">
+        <section class="profile header__profile">
+            <div class="name profile__name">
+                <h1 class="name__title">
+                    Тимофей Утробин
+                </h1>
+                <h2 class="name__subtitle">
+                    Front-end разработчик
+                </h2>
+            </div>
+            <img class="photo box profile__photo" src="static/photo.jpeg" alt="Моя фотография"/>
+        </section>
+        <aside class="social header__social">
+            <a
+                href="https://vk.com/timofeyutrobin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="box social__icon"
+            >
+                <img src="static/vk.svg" alt="vk"/>
+            </a>
+            <a
+                href="https://t.me/timofeyutrobin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="box social__icon"
+            >
+                <img src="static/telegram.svg" alt="telegram"/>
+            </a>
+            <a
+                href="https://github.com/timofeyutrobin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="box social__icon"
+            >
+                <img src="static/github.svg" alt="github"/>
+            </a>
+        </aside>
+        <button id="scrollBtn" class="button scroll-down header__scroll-down"></button>
+    </header>
+    <main class="main page__main">
+        <article id="firstParagraph" class="paragraph main__paragraph">
+            <h2 class="paragraph__title">
+                Обо мне
+            </h2>
+            <p class="paragraph__text">
+                Привет! Я Тимофей Утробин – фронтенд разработчик из Екатеринбурга.
+                Пишу на React каждый день, и до сих пор не надоело.
+                Работаю в Naumen.
+                Закончил МатМех УрФУ в 2020 году, а потом поступил снова.
+                Люблю играть на гитаре и сочинять музыку. Умею ли я это делать, можете оценить
+                <a
+                    class="link"
+                    href="https://soundcloud.com/user-105062230"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >тут</a>.
+            </p>
+        </article>
+        <article class="paragraph paragraph_right main__paragraph">
+            <h2 class="paragraph__title">
+                Ключевые навыки
+            </h2>
+            <ul class="list paragraph__text">
+                <li class="list__item">HTML/CSS/JS</li>
+                <li class="list__item">TypeScript</li>
+                <li class="list__item">React + Redux</li>
+                <li class="list__item">redux-observable + rxjs</li>
+            </ul>
+        </article>
+        <article class="paragraph main__paragraph">
+            <h2 class="paragraph__title">
+                Почему я выбрал курс "Веб-программирование"
+            </h2>
+            <p class="paragraph__text">
+                Ради нового опыта, интересных задач и общения.
+                Считаю, что нужно участвовать в подобных мероприятиях,
+                потому что это способствует развитию сообщества.
+            </p>
+        </article>
+        <article class="paragraph paragraph_right main__paragraph">
+            <h2 class="paragraph__title">
+                Какие темы хотел бы услышать на семинаре
+            </h2>
+            <ul class="list paragraph__text">
+                <li class="list__item">Back-end на Node.js</li>
+                <li class="list__item">Архитектура front-end приложений</li>
+                <li class="list__item">Что-нибудь про софт-скиллы</li>
+                <li class="list__item">Как придумывать темы для семинаров</li>
+            </ul>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

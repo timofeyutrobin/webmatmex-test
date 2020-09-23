@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum'), url('./static/Cuprum/Cuprum-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: local('Cuprum'), url('./static/Cuprum/Cuprum-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@-webkit-keyframes page-bg-animation {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 600px 599px, 0 0;
+  }
+}
+
+@keyframes page-bg-animation {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 600px 599px, 0 0;
+  }
+}
+
+/* ---------- common ---------- */
+
+
+html {
+  font-family: Cuprum, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #1f2129;
+  scroll-behavior: smooth;
+}
+
+.page {
+  margin: 0;
+  background-image: url('static/topography.svg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  -webkit-animation: page-bg-animation 24s linear infinite forwards;
+          animation: page-bg-animation 24s linear infinite forwards;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.box {
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .25);
+}
+
+.link {
+  color: #8d40ff;
+}
+
+.list {
+  list-style-position: inside;
+  list-style-type: square;
+  padding: 0;
+}
+
+.list__item {
+  margin-bottom: 8px;
+}
+
+/* ---------- page layout ---------- */
+
+.page__header {
+  height: 100vh;
+}
+
+/* ---------- header ---------- */
+
+.header {
+  position: relative;
+}
+
+.header__profile {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 100vh;
+}
+
+.header__social {
+  position: absolute;
+  left: 10px;
+  bottom: 26px;
+}
+
+.header__scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+
+  width: 70px;
+  height: 70px;
+}
+
+/* ---------- profile ---------- */
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__name {
+  margin-right: 50px;
+}
+
+.profile__photo {
+  margin-left: auto;
+  margin-right: 50px;
+  width: 40%;
+  max-height: 100%;
+}
+
+/* ---------- title ---------- */
+
+
+.name {
+  padding: 0 30px;
+}
+
+.name__title {
+  margin: 0;
+
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.name__subtitle {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+/* ---------- scroll down ---------- */
+
+.scroll-down {
+  background-color: transparent;
+  background-image: url('static/keyboard-down-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ---------- social ---------- */
+
+.social__icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-left: 20px;
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ---------- main ---------- */
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.main__paragraph {
+  margin: 50px;
+  margin-bottom: 0;
+  max-width: 60%;
+}
+
+/* ---------- paragraph ---------- */
+
+.paragraph_right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.paragraph__title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 30px;
+}
+
+.paragraph__text {
+  font-size: 2rem;
+  margin: 0;
+
+  padding: 10px 30px 30px;
+}
+
+@media screen and (max-width: 800px) {
+  /* ---------- common ---------- */
+
+  html {
+    font-size: 10px;
+  }
+
+  /* ---------- page layout ---------- */
+
+  .page__header {
+    height: auto;
+  }
+
+  /* ---------- header ---------- */
+
+  .header {
+    position: static;
+  }
+
+  .header__profile {
+    position: static;
+    height: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .header__scroll-down {
+    display: none;
+  }
+
+  .header__social {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  /* ---------- profile ---------- */
+
+
+  .profile {
+    display: block;
+  }
+
+  .profile__photo {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* ---------- main ---------- */
+
+  .main__paragraph {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ---------- paragraph ---------- */
+
+  .paragraph {
+    margin: 0;
+    margin-top: 16px;
+  }
+}
